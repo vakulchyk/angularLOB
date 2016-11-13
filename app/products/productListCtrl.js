@@ -1,7 +1,8 @@
 (function() {
     angular
         .module("productManagement")
-        .controller("ProductListCtrl", ProductListCtrl);
+        .controller("ProductListCtrl", 
+            ProductListCtrl);
 
     function ProductListCtrl() {
         var vm = this;
@@ -30,7 +31,11 @@
                 "tags": ["tool"],
                 "imageUrl": "http://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png"
             }
-        ]
+        ];
+        vm.showImage = false;
+        vm.toggleImage = function() {
+            vm.showImage = !vm.showImage;
+        } 
     }
 
 }());
